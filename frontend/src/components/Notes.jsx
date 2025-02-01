@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import AddNoteForm from "./AddNoteForm";
+import Togglable from "./Togglable";
 
 const Notes = ({ userToken, setUserToken }) => {
   const [notes, setNotes] = useState([]);
@@ -28,7 +29,9 @@ const Notes = ({ userToken, setUserToken }) => {
           <li key={note.id}>{note.content}</li>
         ))}
       </ul>
-      <AddNoteForm userToken={userToken} />
+      <Togglable buttonName="add note">
+        <AddNoteForm userToken={userToken} />
+      </Togglable>
     </>
   );
 };
