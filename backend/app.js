@@ -15,6 +15,7 @@ const DbConnect = async () => {
 DbConnect();
 
 app.use(express.json());
+app.use(express.static("dist"));
 app.use(middleware.userExtractor);
 app.use(cors());
 app.use("/login", loginRouter);
