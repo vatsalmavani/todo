@@ -30,7 +30,7 @@ const Notes = ({ userToken, setUserToken }) => {
         ))}
       </ul>
       <Togglable buttonName="add note">
-        <AddNoteForm userToken={userToken} />
+        <AddNoteForm userToken={userToken} notes={notes} setNotes={setNotes} />
       </Togglable>
     </>
   );
