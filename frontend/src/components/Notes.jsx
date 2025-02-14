@@ -11,7 +11,7 @@ const Notes = ({ userToken, setUserToken }) => {
       const config = {
         headers: { Authorization: "Bearer " + userToken },
       };
-      const response = await axios.get("http://localhost:3001/notes", config);
+      const response = await axios.get("/notes", config);
       setNotes(response.data);
     })();
   }, []);

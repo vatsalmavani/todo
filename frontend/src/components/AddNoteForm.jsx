@@ -8,7 +8,7 @@ const AddNoteForm = ({ userToken, notes, setNotes }) => {
   const addNote = async (event) => {
     event.preventDefault();
     setNotes(notes.concat({ content: note, id: "atempid" }));
-    await axios.post("http://localhost:3001/notes", { content: note }, config);
+    await axios.post("/notes", { content: note }, config);
     setNote("");
   };
 
